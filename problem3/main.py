@@ -1,6 +1,10 @@
+#Fungsi Mencari angka muncul sekali
 def array_unique(arrayA, arrayB):
     # your code here
-    return ''
+    compare = set(arrayA).difference(set(arrayB))
+    result = list(compare)
+    result = sorted(result)
+    return result
 
 if __name__ == '__main__':
     print(array_unique([1, 2, 3, 4], [1, 3, 5, 10, 16])) # [2, 4]
